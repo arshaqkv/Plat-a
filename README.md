@@ -40,7 +40,7 @@ This is a full-stack Restaurant Listing Platform built with **React.js** (fronte
 ### 1. Clone the Repository
 
 ```bash
-git clone https://github.com/arshaq_kv/platea.git
+git clone https://github.com/arshaqkv/platea.git
 ```
 
 ### 2. Backend Setup (Node.js + Express + Sequelize)
@@ -66,7 +66,7 @@ b. Install dependencies
 npm install
 
 
-📬 Contact
+### 📬 Contact
 If you have any questions, feel free to reach out:
 
 📧 Email: arshaq31@gmail.com
