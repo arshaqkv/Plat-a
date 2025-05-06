@@ -15,7 +15,7 @@ const Navbar = () => {
           to="/add-restaurant"
           className="bg-amber-900 flex gap-2 text-white px-4 py-2 rounded hover:bg-amber-800 transition"
         >
-          <p>Add New</p>
+          <p>Add Restaurant</p>
           <AddCircleOutline />
         </Link>
       </div>

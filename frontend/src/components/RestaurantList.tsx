@@ -54,65 +54,88 @@ const RestaurantList: React.FC<Props> = ({ restaurants, onDelete }) => {
   };
 
   return (
-    <Container maxWidth="lg" sx={{marginBottom: "2rem"}}>
+    <Container maxWidth="lg" sx={{ marginBottom: "2rem" }}>
       <Box mt={3}>
-        <Typography variant="h4" align="center" fontFamily={"Poppins"} fontWeight={600} gutterBottom>
+        <Typography
+          variant="h4"
+          align="center"
+          fontFamily={"Poppins"}
+          fontWeight={600}
+          gutterBottom
+        >
           All Restaurants
         </Typography>
         <Divider sx={{ mb: 4 }} />
-        <Grid container spacing={3}>
-          {restaurants.map((restaurant) => (
-            <Card
-              elevation={4}
-              sx={{
-                height: "100%",
-                width: "270px",
-                display: "flex",
-                flexDirection: "column",
-                justifyContent: "space-between",
-                
-              }}
+        <Grid container spacing={3} justifyContent="center">
+          {restaurants.length === 0 ? (
+            <Typography
+              variant="body1"
+              align="center"
+              color="text.secondary"
+              sx={{ mt: 4 }}
             >
-              <CardContent>
-                <Typography variant="h6" align="center" fontFamily= "Poppins" gutterBottom>
-                  {restaurant.name}
-                </Typography>
-                <Typography
-                  variant="body2"
-                  align="center"
-                  color="textSecondary"
-                >
-                  <PhoneInTalk sx={{ fontSize: 16, mr: 0.5 }} /> +91{" "}
-                  {restaurant.contact}
-                </Typography>
-                <Typography
-                  variant="body2"
-                  align="center"
-                  color="textSecondary"
-                >
-                  <LocationOnOutlined sx={{ fontSize: 16, mr: 0.5 }} />{" "}
-                  {restaurant.address}
-                </Typography>
-              </CardContent>
+              No restaurants found. Please add one to get started.
+            </Typography>
+          ) : (
+            restaurants.map((restaurant) => (
+              <Card
+                elevation={4}
+                sx={{
+                  height: "100%",
+                  width: "270px",
+                  display: "flex",
+                  flexDirection: "column",
+                  justifyContent: "space-between",
+                }}
+              >
+                <CardContent>
+                  <Typography
+                    variant="h6"
+                    align="center"
+                    fontFamily="Poppins"
+                    gutterBottom
+                  >
+                    {restaurant.name}
+                  </Typography>
+                  <Typography
+                    variant="body2"
+                    align="center"
+                    color="textSecondary"
+                  >
+                    <PhoneInTalk sx={{ fontSize: 16, mr: 0.5 }} /> +91{" "}
+                    {restaurant.contact}
+                  </Typography>
+                  <Typography
+                    variant="body2"
+                    align="center"
+                    color="textSecondary"
+                  >
+                    <LocationOnOutlined sx={{ fontSize: 16, mr: 0.5 }} />{" "}
+                    {restaurant.address}
+                  </Typography>
+                </CardContent>
 
-              <CardActions sx={{ justifyContent: "center", mt: "auto" }}>
-                <Button
-                  size="small"
-                  color="primary"
-                  onClick={() => navigate(`/edit-restaurant/${restaurant.id}`)}
-                >
-                  <EditSquare />
-                </Button>
-                <Button
-                  size="small"
-                  color="error"
-                  onClick={() => handleDeleteRestaurant(restaurant.id)}
-                >
-                  <HighlightOff />
-                </Button>
-              </CardActions>
-            </Card>
-          ))}
+                <CardActions sx={{ justifyContent: "center", mt: "auto" }}>
+                  <Button
+                    size="small"
+                    color="primary"
+                    onClick={() =>
+                      navigate(`/edit-restaurant/${restaurant.id}`)
+                    }
+                  >
+                    <EditSquare />
+                  </Button>
+                  <Button
+                    size="small"
+                    color="error"
+                    onClick={() => handleDeleteRestaurant(restaurant.id)}
+                  >
+                    <HighlightOff />
+                  </Button>
+                </CardActions>
+              </Card>
+            ))
+          )}
         </Grid>
 
         {/* Snackbar */}
