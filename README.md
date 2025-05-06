@@ -27,7 +27,7 @@ This is a full-stack Restaurant Listing Platform built with **React.js** (fronte
 
 | Layer      | Technology              |
 |------------|--------------------------|
-| Frontend   | React.js, Material-UI    |
+| Frontend   | React.js, Material-UI, Tailwind Css    |
 | Backend    | Node.js, Express.js      |
 | Database   | MySQL (via Clever Cloud) |
 | ORM        | Sequelize                |
