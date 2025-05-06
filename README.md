@@ -6,7 +6,7 @@ This is a full-stack Restaurant Listing Platform built with **React.js** (fronte
 
 ## 🚀 Deployed Application
 
-- **Frontend (ReactJS on Vercel):** [https://platea-pi.vercel.app/](https://platea-pi.vercel.app/)
+- **Frontend (ReactJS on Vercel):** [https://platea-pi.vercel.app](https://platea-pi.vercel.app)
 - **Backend (Node.js on Render):** [https://platea.onrender.com](https://platea.onrender.com)
 
 
